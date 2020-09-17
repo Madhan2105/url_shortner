@@ -16,7 +16,7 @@ URL shortener  API for transforming long, ugly links into nice, memorable and tr
 #Usage
 
 #Fetch all the URL
-URL    :- http://localhost:8000/api/
+URL    :- http://0.0.0.0:8000/api/
 Method :- GET
 Output :- 
           [
@@ -35,7 +35,7 @@ Output :-
           ]
           
 #filter a certain URL          
-URL    :- http://localhost:8000/api/FIsnLW
+URL    :- http://0.0.0.0:8000/api/mNZZot
 Method :- GET
 Output :-
           [
@@ -48,7 +48,7 @@ Output :-
           ]
           
 #Add a URL and get a short url          
-URL    :- http://localhost:8000/api/
+URL    :- http://0.0.0.0:8000/api/
 Method :- POST
 Body   :- 
           {
@@ -66,7 +66,7 @@ Output :-
           }
           
 #Update a URL and get a short url       
-URL    :- http://localhost:8000/api/
+URL    :- http://0.0.0.0:8000/api/
 Method :- PUT
 Body   :- 
           {
