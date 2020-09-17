@@ -15,17 +15,39 @@ URL shortener  API for transforming long, ugly links into nice, memorable and tr
   
 #Usage
 
-URL    :- http://localhost/api/
+#Fetch all the URL
+URL    :- http://localhost:8000/api/
 Method :- GET
-Output :- [
-            {
-              "id": 2,
-              "slug": "mNZZot", 
-              "url": "https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers1",
-              "short_url":"http://0.0.0.0:8000/goto/mNZZot/"
-            }
+Output :- 
+          [
+              {
+                  "id": 2,
+                  "slug": "mNZZot",
+                  "url": "https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers1",
+                  "short_url": "http://0.0.0.0:8000/goto/mNZZot/"
+              },
+              {
+                  "id": 5,
+                  "slug": "FIsnLW",
+                  "url": "https://www.django-rest-framework.org/community/tutorials-and-resources/#articles",
+                  "short_url": "http://localhost:8000/goto/FIsnLW/"
+              }
           ]
-
+          
+#filter a certain URL          
+URL    :- http://localhost:8000/api/FIsnLW
+Method :- GET
+Output :-
+          [
+              {
+                  "id": 5,
+                  "slug": "FIsnLW",
+                  "url": "https://www.django-rest-framework.org/community/tutorials-and-resources/#articles",
+                  "short_url": "http://localhost:8000/goto/FIsnLW/"
+              }
+          ]
+          
+#Add a URL and get a short url          
 URL    :- http://localhost:8000/api/
 Method :- POST
 Body   :- 
@@ -42,7 +64,8 @@ Output :-
                   "short_url": "http://0.0.0.0:8000/goto/7FGDd3/"
               }
           }
-       
+          
+#Update a URL and get a short url       
 URL    :- http://localhost:8000/api/
 Method :- PUT
 Body   :- 
@@ -60,7 +83,8 @@ Output :-
                   "short_url": "http://0.0.0.0:8000/goto/7FGDd3/"
               }
           }
-
+          
+#Delete a URL 
 URL    :- http://0.0.0.0:0/api/7FGDd3
 Method :- DELETE
 Output :- 
@@ -69,3 +93,7 @@ Output :-
               "result": "URL deleted successfully"
           }
           
+#Use the short url
+URL    :- http://0.0.0.0:8000/goto/FIsnLW
+Method :- GET
+Output :- Redirects to the given webiste 
