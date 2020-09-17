@@ -1,0 +1,7 @@
+1)Django Framework :- It's an open source web framework which is used for rapid development and the community support is also good for django.
+
+2)random module    :- It's an Python in-built library used to generate random string which has been used as token.
+
+3)SQLite 	   :- Django comes with SQLite database which can used in the production and it's lightweight.we can easily integrate with 
+		      other Database if needed withot much efforts because ORM is used to interact with the data.	
+
