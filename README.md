@@ -2,10 +2,7 @@
 URL shortener  API for transforming long, ugly links into nice, memorable and trackable short URLs
 
 #Prerequisites
-1)Python 3+ (Python 3.6 preffered)  
-  Download Python from this link:- https://www.python.org/downloads/
-  Refer to this link for installtion of Python :- https://realpython.com/installing-python/    
-2)Docker 
+1)Docker 
   Refer to the official documentation for the installation and configuration of the docker :- https://docs.docker.com/get-docker/
   
 #Installation
