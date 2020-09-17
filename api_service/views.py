@@ -73,8 +73,12 @@ def url_shortener(request,optional_slug=None):
             # the token entered by the User
             users_slug = optional_slug
             # Deleting the record from the table
-            UrlModel.objects.filter(slug=users_slug).delete()
-            return Response(data={'success': True, 'result': "URL deleted successfully"}, status=status.HTTP_201_CREATED)            
+            url = UrlModel.objects.filter(slug=users_slug)
+            if(url):
+                url.delete()
+                return Response(data={'success': True, 'result': "URL deleted successfully"}, status=status.HTTP_201_CREATED)            
+            else:
+                return Response(data={'success': False, 'message': f'{str("No Url Found to delete")}'}, status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
         return Response(data={'success': False, 'message': f'{str(e)}'}, status=status.HTTP_400_BAD_REQUEST)
 
