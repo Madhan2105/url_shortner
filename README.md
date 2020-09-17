@@ -65,12 +65,12 @@ Output :-
               }
           }
           
-#Update a URL and get a short url       
+#Update a URL     
 URL    :- http://0.0.0.0:8000/api/
 Method :- PUT
 Body   :- 
           {
-             "slug": "7FGDd3",
+            "slug": "7FGDd3",
             "url" : "https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers"
           }
 Output :-
@@ -85,7 +85,7 @@ Output :-
           }
           
 #Delete a URL 
-URL    :- http://0.0.0.0:0/api/7FGDd3
+URL    :- http://0.0.0.0:8000/api/7FGDd3
 Method :- DELETE
 Output :- 
           {
@@ -94,6 +94,6 @@ Output :-
           }
           
 #Use the short url
-URL    :- http://localhost:8000/goto/FIsnLW
+URL    :- http://0.0.0.0:8000/goto/FIsnLW
 Method :- GET
 Output :- Redirects to the given webiste 
