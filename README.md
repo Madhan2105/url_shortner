@@ -94,6 +94,6 @@ Output :-
           }
           
 #Use the short url
-URL    :- http://0.0.0.0:8000/goto/FIsnLW
+URL    :- http://localhost:8000/goto/FIsnLW
 Method :- GET
 Output :- Redirects to the given webiste 
